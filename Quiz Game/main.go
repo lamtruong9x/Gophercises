@@ -23,6 +23,19 @@ func main() {
 		fmt.Printf("Can read the file")
 	}
 	fmt.Println(lines)
+	questionbank := []problem{}
+	for i, e := range lines {
+		questionbank[i] = problem{
+			question: e[0],
+			answer: e[1],
+		}
+	}
+	fmt.Println(questionbank)
+}
+
+type problem struct {
+	question string
+	answer string
 }
 
 func exit(mess string) {
